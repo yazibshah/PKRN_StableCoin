@@ -2,7 +2,15 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+solc = "0.8.24"
+via_ir = true
 
-remappings = ['@openzeppelin/contracts=lib/openzeppelin-contracts/contracts']
+# CORRECT REMAPPINGS (this is what you were missing)
+remappings = [    
+    "@openzeppelin/=lib/openzeppelin-contracts/"
+]
 
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+# Optional: cache & ffi
+cache_path  = "cache"
+ffi         = false
+fs_permissions = [{ access = "read", path = "./"}]

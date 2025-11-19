@@ -6,6 +6,7 @@ import {ERC20Burnable} from "@openzeppelin/contracts/token/ERC20/extensions/ERC2
 import {ERC20Pausable} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol";
 import {AccessControl} from "@openzeppelin/contracts/access/AccessControl.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+
 contract PKRN is ERC20, ERC20Burnable, AccessControl, Ownable, ERC20Pausable {
 
     bytes32 public constant MINTER_ROLE= keccak256("MINTER_ROLE");
